@@ -1,24 +1,3 @@
-# Godot CADLikeOrbit_Camera
+# Quick FEA - Godot
 
-A Camera wich behaves like most Cameras in 
-CAD-Softwares. It uses the mouse and lets you Orbit,
-Zoom and Pan around. 
-
-Usage:
-
-	1. Activate Plugin
-	2. Add CADLike-Orbit Camera via new Node (Control+A)  to the Scene
-	3. Define InputMap-Actions: (Project->Poject Settings->InputMap)
-			example InputMap-Actions:
-				Name: "Zooming", Event: Righ Button
-				Name "Panning", Event: Middle Button
-				Name: "Rotating", Event Left Button
-
----------------------------------------------------------------------
-To determine the Focalpoint a RayCast-Node is used.
-Has the RayCast no Collision  (Mouse is not on
-a Pickable Object), Pre-Defined Uservalues are used.
- 
-To Keep one Mousebutton unused the Combination of the
-Pan- and Zoom-Action can be used to trigger the Rotate
- Action.
+This project is intended to be a technical demo of Godot's capabilities for engineering productivity software, invoking a Finite Element library for structural engineering analysis. The long-term goal is to create quality open-source software, suited to use in engineering practice, and extensible for custom use-cases and workflows. Furthermore, the software will be a demonstration of the finite element method for teaching and other academic applications.
