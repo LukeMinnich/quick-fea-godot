@@ -1,0 +1,290 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/themes/DefaultPopupWindow.theme" type="Theme" id=1]
+
+[node name="SectionProperties" type="Panel"]
+margin_top = 304.0
+margin_right = 380.0
+margin_bottom = 504.0
+rect_min_size = Vector2( 380, 200 )
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 370.0
+margin_bottom = 190.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_right = 360.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "[u][i]Section Properties[/i][/u]"
+text = "Section Properties"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 360.0
+margin_bottom = 180.0
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Symbol" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_right = 30.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 30, 0 )
+rect_clip_content = false
+theme = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][i]A[/i][/b]"
+text = "A"
+scroll_active = false
+
+[node name="Definition" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 36.0
+margin_right = 283.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Total cross-sectional area"
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 289.0
+margin_right = 325.0
+margin_bottom = 17.0
+text = "10.6"
+
+[node name="Units" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 331.0
+margin_right = 360.0
+margin_bottom = 17.0
+text = "(in2)"
+
+[node name="Symbol2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 23.0
+margin_right = 30.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 0 )
+rect_clip_content = false
+theme = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][i]Avx[/i][/b]"
+text = "Avx"
+scroll_active = false
+
+[node name="Definition2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 23.0
+margin_right = 283.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "Effective shear area along x-axis"
+
+[node name="Value2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 289.0
+margin_top = 23.0
+margin_right = 325.0
+margin_bottom = 40.0
+text = "3.05"
+
+[node name="Units2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 331.0
+margin_top = 23.0
+margin_right = 360.0
+margin_bottom = 40.0
+text = "(in2)"
+
+[node name="Symbol3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 46.0
+margin_right = 30.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 30, 0 )
+rect_clip_content = false
+theme = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][i]Avy[/i][/b]"
+text = "Avy"
+scroll_active = false
+
+[node name="Definition3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 46.0
+margin_right = 283.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+text = "Effective shear area along y-axis"
+
+[node name="Value3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 289.0
+margin_top = 46.0
+margin_right = 325.0
+margin_bottom = 63.0
+text = "2.90"
+
+[node name="Units3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 331.0
+margin_top = 46.0
+margin_right = 360.0
+margin_bottom = 63.0
+text = "(in2)"
+
+[node name="Symbol4" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 69.0
+margin_right = 30.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 30, 0 )
+rect_clip_content = false
+theme = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][i]J[/i][/b]"
+text = "J"
+scroll_active = false
+
+[node name="Definition4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 69.0
+margin_right = 283.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+text = "Torsional constant"
+
+[node name="Value4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 289.0
+margin_top = 69.0
+margin_right = 325.0
+margin_bottom = 86.0
+text = "0.545"
+
+[node name="Units4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 331.0
+margin_top = 69.0
+margin_right = 360.0
+margin_bottom = 86.0
+text = "(in4)"
+
+[node name="Symbol5" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 92.0
+margin_right = 30.0
+margin_bottom = 109.0
+rect_min_size = Vector2( 30, 0 )
+rect_clip_content = false
+theme = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][i]Ixx[/i][/b]"
+text = "Ixx"
+scroll_active = false
+
+[node name="Definition5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 92.0
+margin_right = 283.0
+margin_bottom = 109.0
+size_flags_horizontal = 3
+text = "Moment of inertia about x-axis"
+
+[node name="Value5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 289.0
+margin_top = 92.0
+margin_right = 325.0
+margin_bottom = 109.0
+text = "448"
+
+[node name="Units5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 331.0
+margin_top = 92.0
+margin_right = 360.0
+margin_bottom = 109.0
+text = "(in4)"
+
+[node name="Symbol6" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 115.0
+margin_right = 30.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 30, 0 )
+rect_clip_content = false
+theme = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][i]Iyy[/i][/b]"
+text = "Iyy"
+scroll_active = false
+
+[node name="Definition6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 115.0
+margin_right = 283.0
+margin_bottom = 132.0
+size_flags_horizontal = 3
+text = "Moment of inertia about y-axis"
+
+[node name="Value6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 289.0
+margin_top = 115.0
+margin_right = 325.0
+margin_bottom = 132.0
+text = "24.5"
+
+[node name="Units6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 331.0
+margin_top = 115.0
+margin_right = 360.0
+margin_bottom = 132.0
+text = "(in4)"
+
+[node name="Symbol10" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 138.0
+margin_right = 30.0
+margin_bottom = 155.0
+rect_min_size = Vector2( 30, 0 )
+rect_clip_content = false
+theme = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][i]Cw[/i][/b]"
+text = "Cw"
+scroll_active = false
+
+[node name="Definition10" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 138.0
+margin_right = 283.0
+margin_bottom = 155.0
+size_flags_horizontal = 3
+text = "Warping constant"
+
+[node name="Value10" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 289.0
+margin_top = 138.0
+margin_right = 325.0
+margin_bottom = 155.0
+text = "1480"
+
+[node name="Units10" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 331.0
+margin_top = 138.0
+margin_right = 360.0
+margin_bottom = 155.0
+text = "(in6)"

@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/scenes/sandbox/scripts/sandbox_3d.gd" type="Script" id=1]
+[ext_resource path="res://tests/data/shapes/test_shape_wide_flange.tres" type="Resource" id=2]
+[ext_resource path="res://assets/scenes/sandbox/scripts/hud.gd" type="Script" id=4]
+[ext_resource path="res://assets/scenes/ux/WindowSelection.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/scenes/sandbox/scripts/bounding_box.gd" type="Script" id=7]
+[ext_resource path="res://assets/materials/reference_plane.tres" type="Material" id=8]
+[ext_resource path="res://assets/materials/wireframe_dark.tres" type="Material" id=9]
+
+[sub_resource type="ArrayMesh" id=1]
+surfaces/0 = {
+"aabb": AABB( -0.5, -0.5, -1, 1.00001, 1, 1.00001 ),
+"array_data": PoolByteArray( 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 128, 191, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 128, 191, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 128, 191, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 191 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 1, 0, 2, 0, 2, 0, 3, 0, 3, 0, 0, 0, 4, 0, 5, 0, 5, 0, 6, 0, 6, 0, 7, 0, 7, 0, 4, 0, 1, 0, 5, 0, 2, 0, 6, 0, 3, 0, 7, 0, 0, 0, 4, 0 ),
+"blend_shape_data": [  ],
+"format": 97537,
+"index_count": 24,
+"primitive": 1,
+"skeleton_aabb": [  ],
+"vertex_count": 8
+}
+
+[sub_resource type="PlaneMesh" id=2]
+material = ExtResource( 8 )
+
+[node name="SandboxSpatial" type="Spatial"]
+script = ExtResource( 1 )
+shape = ExtResource( 2 )
+
+[node name="CameraContainer" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 9, -6 )
+
+[node name="Camera" type="Camera" parent="CameraContainer"]
+transform = Transform( 1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 1.28323, 7.05649, 23.7024 )
+projection = 1
+current = true
+size = 20.0
+near = 0.01
+far = 1000.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="WindowSelection" parent="CameraContainer/Camera" instance=ExtResource( 5 )]
+visible = false
+
+[node name="Model" type="VisibilityNotifier" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.53674e-07, 0 )
+
+[node name="BoundingBox" type="Spatial" parent="Model"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.53674e-07, 0 )
+script = ExtResource( 7 )
+
+[node name="Wireframe" type="MeshInstance" parent="Model/BoundingBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 9 )
+
+[node name="Grids" type="Spatial" parent="Model"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Model/Grids"]
+mesh = SubResource( 2 )
+material/0 = ExtResource( 8 )
+
+[node name="HUD" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

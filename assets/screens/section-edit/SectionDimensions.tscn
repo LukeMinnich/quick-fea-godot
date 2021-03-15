@@ -1,0 +1,210 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/screens/controls/LineEditNumerical.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/screens/section-edit/scripts/section_dimensions.gd" type="Script" id=3]
+[ext_resource path="res://assets/themes/DefaultPopupWindow.theme" type="Theme" id=4]
+
+
+[node name="SectionDimensions" type="Panel"]
+margin_right = 320.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 320, 300 )
+theme = ExtResource( 4 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 310.0
+margin_bottom = 290.0
+theme = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "[u][i]Input Dimensions[/i][/u]"
+text = "Input Dimensions"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 300.0
+margin_bottom = 150.0
+theme = ExtResource( 4 )
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Symbol" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_right = 25.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 25, 0 )
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "[b][i]d[/i][/b]"
+text = "d"
+scroll_active = false
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 31.0
+margin_top = 5.0
+margin_right = 207.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+text = "Nominal depth"
+
+[node name="InputDepth" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 213.0
+margin_right = 273.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 60, 0 )
+text = "1.00"
+max_length = 6
+minimum = 1.0
+
+[node name="Units" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 279.0
+margin_top = 5.0
+margin_right = 300.0
+margin_bottom = 22.0
+text = "(in)"
+
+[node name="Symbol4" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 33.0
+margin_right = 25.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 25, 0 )
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "[b][i]tw[/i][/b]"
+text = "tw"
+scroll_active = false
+
+[node name="Description4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 31.0
+margin_top = 38.0
+margin_right = 207.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+text = "Web thickness"
+
+[node name="InputWebThickness" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 213.0
+margin_top = 33.0
+margin_right = 273.0
+margin_bottom = 60.0
+text = "0.100"
+max_length = 6
+display_precision = 3
+minimum = 0.1
+
+[node name="Units4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 279.0
+margin_top = 38.0
+margin_right = 300.0
+margin_bottom = 55.0
+text = "(in)"
+
+[node name="Symbol2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 66.0
+margin_right = 25.0
+margin_bottom = 93.0
+rect_min_size = Vector2( 25, 0 )
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "[b][i]bf[/i][/b]"
+text = "bf"
+scroll_active = false
+
+[node name="Description2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 31.0
+margin_top = 71.0
+margin_right = 207.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+text = "Flange width"
+
+[node name="InputFlangeWidth" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 213.0
+margin_top = 66.0
+margin_right = 273.0
+margin_bottom = 93.0
+text = "1.00"
+max_length = 6
+minimum = 1.0
+
+[node name="Units2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 279.0
+margin_top = 71.0
+margin_right = 300.0
+margin_bottom = 88.0
+text = "(in)"
+
+[node name="Symbol3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 99.0
+margin_right = 25.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 25, 0 )
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "[b][i]tf[/i][/b]"
+text = "tf"
+scroll_active = false
+
+[node name="Description3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 31.0
+margin_top = 104.0
+margin_right = 207.0
+margin_bottom = 121.0
+size_flags_horizontal = 3
+text = "Flange thickness"
+
+[node name="InputFlangeThickness" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 213.0
+margin_top = 99.0
+margin_right = 273.0
+margin_bottom = 126.0
+text = "0.100"
+max_length = 6
+display_precision = 3
+minimum = 0.1
+
+[node name="Units3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 279.0
+margin_top = 104.0
+margin_right = 300.0
+margin_bottom = 121.0
+text = "(in)"
+[connection signal="number_changed" from="MarginContainer/VBoxContainer/GridContainer/InputDepth" to="." method="_on_InputDepth_number_changed"]
+[connection signal="number_changed" from="MarginContainer/VBoxContainer/GridContainer/InputWebThickness" to="." method="_on_InputWebThickness_number_changed"]
+[connection signal="number_changed" from="MarginContainer/VBoxContainer/GridContainer/InputFlangeWidth" to="." method="_on_InputFlangeWidth_number_changed"]
+[connection signal="number_changed" from="MarginContainer/VBoxContainer/GridContainer/InputFlangeThickness" to="." method="_on_InputFlangeThickness_number_changed"]

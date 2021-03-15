@@ -1,0 +1,128 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/scenes/ux/window_selection.gd" type="Script" id=1]
+[ext_resource path="res://assets/materials/collider_01.tres" type="Material" id=2]
+[ext_resource path="res://assets/materials/collider_03.tres" type="Material" id=3]
+[ext_resource path="res://assets/materials/collider_02.tres" type="Material" id=4]
+
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.5, 0.5, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = ExtResource( 2 )
+flip_faces = true
+size = Vector3( 0.5, 0.5, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.1, 0.5, 1 )
+
+[sub_resource type="CubeMesh" id=4]
+material = ExtResource( 4 )
+flip_faces = true
+size = Vector3( 0.1, 0.5, 1 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.1, 0.5, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+material = ExtResource( 3 )
+flip_faces = true
+size = Vector3( 0.1, 0.5, 1 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.5, 0.1, 1 )
+
+[sub_resource type="CubeMesh" id=8]
+material = ExtResource( 4 )
+flip_faces = true
+size = Vector3( 0.5, 0.1, 1 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.5, 0.1, 1 )
+
+[sub_resource type="CubeMesh" id=10]
+material = ExtResource( 3 )
+flip_faces = true
+size = Vector3( 0.5, 0.1, 1 )
+
+[node name="WindowSelection" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, -20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": "Used in windowing selections. Wiill detect collisions on Layer02 only."
+}
+
+[node name="CenterOfSelection" type="Area" parent="."]
+input_ray_pickable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="Center" type="CollisionShape" parent="CenterOfSelection"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CenterOfSelection"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="RightOfSelection" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0 )
+input_ray_pickable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="Right" type="CollisionShape" parent="RightOfSelection"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RightOfSelection"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="LeftOfSelection" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0 )
+input_ray_pickable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="Left" type="CollisionShape" parent="LeftOfSelection"]
+shape = SubResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="LeftOfSelection"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="TopOfSelection" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0 )
+input_ray_pickable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="Top" type="CollisionShape" parent="TopOfSelection"]
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="TopOfSelection"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="BottomOfSelection" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0 )
+input_ray_pickable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="Bottom" type="CollisionShape" parent="BottomOfSelection"]
+shape = SubResource( 9 )
+
+[node name="MeshInstance" type="MeshInstance" parent="BottomOfSelection"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="BlinkTimer" type="Timer" parent="."]
+wait_time = 0.25
+[connection signal="timeout" from="BlinkTimer" to="." method="_on_BlinkTimer_timeout"]

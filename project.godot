@@ -1,0 +1,126 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "FeaBase",
+"language": "GDScript",
+"path": "res://assets/scenes/fea/scripts/fea_base.gd"
+}, {
+"base": "FeaBase",
+"class": "FeaFrame",
+"language": "GDScript",
+"path": "res://assets/scenes/fea/scripts/fea_frame.gd"
+}, {
+"base": "FeaBase",
+"class": "FeaNode",
+"language": "GDScript",
+"path": "res://assets/scenes/fea/scripts/fea_node.gd"
+}, {
+"base": "Reference",
+"class": "LinkedList",
+"language": "GDScript",
+"path": "res://assets/scripts/collections/linked_list.gd"
+}, {
+"base": "Reference",
+"class": "Maths",
+"language": "GDScript",
+"path": "res://assets/scripts/numerics/maths.gd"
+}, {
+"base": "Reference",
+"class": "ModelChangeMessage",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/model_change_message.gd"
+}, {
+"base": "Reference",
+"class": "ModelChangeTransaction",
+"language": "GDScript",
+"path": "res://assets/scripts/globals/model_change_transaction.gd"
+}, {
+"base": "Reference",
+"class": "ShapeOutline",
+"language": "GDScript",
+"path": "res://assets/scripts/geometry/shape_outline.gd"
+}, {
+"base": "Resource",
+"class": "ShapeOutlineResource",
+"language": "GDScript",
+"path": "res://assets/scripts/geometry/shape_outline_resource.gd"
+}, {
+"base": "Reference",
+"class": "Shapes",
+"language": "GDScript",
+"path": "res://assets/scripts/geometry/shapes.gd"
+}, {
+"base": "Reference",
+"class": "Stack",
+"language": "GDScript",
+"path": "res://assets/scripts/collections/stack.gd"
+} ]
+_global_script_class_icons={
+"FeaBase": "",
+"FeaFrame": "",
+"FeaNode": "",
+"LinkedList": "",
+"Maths": "",
+"ModelChangeMessage": "",
+"ModelChangeTransaction": "",
+"ShapeOutline": "",
+"ShapeOutlineResource": "",
+"Shapes": "",
+"Stack": ""
+}
+
+[application]
+
+config/name="Quick-fea-godot"
+config/icon="res://icon.png"
+
+[autoload]
+
+ViewEvents="*res://assets/scripts/globals/view_events.gd"
+ModelInteraction="*res://assets/scripts/globals/model_interaction.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
+
+[display]
+
+window/vsync/use_vsync=false
+
+[input]
+
+pointer_device_select={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+keydown_add_to_selection={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777238,"unicode":0,"echo":false,"script":null)
+ ]
+}
+keydown_remove_from_selection={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777237,"unicode":0,"echo":false,"script":null)
+ ]
+}
+keydown_toggle_wireframe={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":84,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[rendering]
+
+limits/rendering/max_renderable_elements=1000000
+quality/filters/msaa=2
+environment/default_environment="res://default_env.tres"

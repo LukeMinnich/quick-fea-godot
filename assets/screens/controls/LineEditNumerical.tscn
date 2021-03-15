@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/screens/controls/scripts/line_edit_numerical.gd" type="Script" id=1]
+
+[node name="LineEditNumerical" type="LineEdit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -929.0
+margin_bottom = -731.0
+text = "0.0"
+align = 2
+max_length = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+display_precision = 2
+[connection signal="focus_entered" from="." to="." method="_on_LineEditNumerical_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_LineEditNumerical_focus_exited"]
+[connection signal="text_entered" from="." to="." method="_on_LineEditNumerical_text_entered"]

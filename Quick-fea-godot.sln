@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quick-fea-godot", "Quick-fea-godot.csproj", "{310380AC-FE90-4899-9E60-66083A769D65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triangle", "lib\triangle\Triangle.csproj", "{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{310380AC-FE90-4899-9E60-66083A769D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{310380AC-FE90-4899-9E60-66083A769D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{310380AC-FE90-4899-9E60-66083A769D65}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{310380AC-FE90-4899-9E60-66083A769D65}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{310380AC-FE90-4899-9E60-66083A769D65}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{310380AC-FE90-4899-9E60-66083A769D65}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{310380AC-FE90-4899-9E60-66083A769D65}.Release|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{310380AC-FE90-4899-9E60-66083A769D65}.Release|Any CPU.Build.0 = ExportRelease|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3EED24-EA92-49D9-B5BD-0F5DF93203C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A7E4C51-BE9A-4EB1-BDC4-999BC998D8CF}
+	EndGlobalSection
+EndGlobal
